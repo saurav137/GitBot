@@ -1,5 +1,15 @@
 # GitBot
 
+A web app that provides simple user interface  to create and delete github repositories.
+
+You need to create and use your own access token while making a request to github api . httpoption in git-service.ts is the header for request, access token can be added there.
+
+Also to use dialogue flow Api add your client id in header named as httoption3 to understand users intent. You will  need to create new set of intents and set reponse body as per the code in this project.
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.13.
 
 ## Development server

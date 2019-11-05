@@ -1,0 +1,32 @@
+
+<div class="container">
+
+   
+
+<div class="row card-deck">
+    <div *ngFor="let a of repoList">
+     
+          <div class="col-sm-6">
+        <div class="card  mb-3" style="width: 18rem;">
+          <br>
+          <!-- <img src="https://source.unsplash.com/user/erondu/200x300" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title">{{a.name}}</h5> 
+             <a mat-button (click)="saveFavourite(a)" class="btn btn-primary float-right">Save</a> 
+             <div class="btn-group " role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary float-right" ngbPopover="Copy Http link to Clipboard" triggers="mouseenter:mouseleave">HTTP</button>
+                <button type="button" class="btn btn-secondary" ngbPopover="Copy ssh link to Clipboard" triggers="mouseenter:mouseleave">SSH</button>
+                
+              </div>
+          </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf = "created" class="alert alert-primary" role="alert">
+        A new repo {{myid.value}} created
+      </div>
+</div>

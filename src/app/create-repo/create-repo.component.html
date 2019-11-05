@@ -1,0 +1,24 @@
+
+
+<div class="container">
+  <br>
+
+ 
+ <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Enter name of repository</label>
+      <input #myid type="text" class="form-control"  aria-describedby="emailHelp" placeholder="demo repo">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <input #desc type="text" class="form-control"  placeholder="What's your new repo is all about">
+    </div>
+    
+   
+  </form>
+  <button type="submit" (click)="onClick(myid.value,desc.value)" class="btn btn-primary">Submit</button>
+  </div>
+
+  <div *ngIf = "created" class="alert alert-primary" role="alert">
+      A new repo {{myid.value}} created
+    </div>
